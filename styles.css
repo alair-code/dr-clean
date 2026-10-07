@@ -635,6 +635,75 @@ section[id] {
     }
 }
 
+/* ===== MOBILE EXPERIENCE ===== */
+html,
+body {
+    overflow-x: hidden;
+}
+
+@media (max-width: 767px) {
+    #conteudo section,
+    footer {
+        overflow-x: clip;
+    }
+
+    .before-after-frame {
+        width: 100%;
+    }
+
+    #faq .faq-question {
+        gap: 0.75rem;
+    }
+
+    #faq .faq-question > span:first-child {
+        min-width: 0;
+    }
+
+    #faq .faq-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .whatsapp-float {
+        z-index: 90;
+    }
+}
+
+@media (max-width: 359px) {
+    #inicio > .relative.z-10 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    #inicio h1 {
+        font-size: 2.15rem;
+    }
+
+    .hero-actions a {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .before-after-label {
+        max-width: 38%;
+    }
+
+    .before-after-label span {
+        font-size: 0.62rem;
+    }
+
+    #faq .faq-question {
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
 /* ===== WHATSAPP / CONVERSION ===== */
 .whatsapp-float {
     min-width: 3.5rem;
