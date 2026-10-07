@@ -648,13 +648,6 @@ section[id] {
         gap: 1.25rem;
     }
 
-    #pain-grid > article,
-    #services-grid > article,
-    #steps-grid > article,
-    #why-grid > article {
-        min-height: 100%;
-    }
-
     #faq {
         scroll-margin-top: 6rem;
     }
