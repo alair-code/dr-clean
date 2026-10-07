@@ -63,7 +63,13 @@ section[id] {
 }
 
 .floaty {
-    animation: floaty 5s ease-in-out infinite;
+    animation: floaty 6s ease-in-out infinite;
+}
+
+.floaty,
+.pulse-whatsapp,
+.marquee-track {
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes floaty {
@@ -72,7 +78,7 @@ section[id] {
 }
 
 .pulse-whatsapp {
-    animation: pulseWhatsapp 2.2s ease-out infinite;
+    animation: pulseWhatsapp 2.8s ease-out infinite;
 }
 
 @keyframes pulseWhatsapp {
@@ -829,6 +835,36 @@ body {
 
     .whatsapp-float:hover {
         transform: none;
+    }
+}
+
+
+/* ===== BLOCO 11 — MICROINTERAÇÕES E ANIMAÇÕES ===== */
+@media (prefers-reduced-motion: no-preference) {
+    .hero-actions a,
+    .header-cta,
+    .whatsapp-float,
+    #services-grid > article > a,
+    .site-header nav a {
+        transition-duration: 0.2s;
+    }
+
+    .hero-actions a:hover,
+    .header-cta:hover,
+    #services-grid > article > a:hover {
+        transform: translateY(-2px);
+    }
+
+    .whatsapp-float:hover {
+        transform: translateY(-2px) scale(1.03);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .floaty,
+    .pulse-whatsapp,
+    .marquee-track {
+        animation: none !important;
     }
 }
 
