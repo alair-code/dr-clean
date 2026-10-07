@@ -1367,12 +1367,6 @@ body {
     outline-offset: 4px;
 }
 
-@media (min-width: 640px) {
-    .quote-form-actions {
-        align-items: flex-start;
-    }
-}
-
 @media (max-width: 639px) {
     .quote-form {
         margin-top: 2rem;
