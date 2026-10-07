@@ -176,7 +176,7 @@ Componente visualmente atraente e fácil de usar no celular.
 
 FAQ claro, elegante e útil para quem está quase entrando em contato.
 
-**Status:** ⬜ Não iniciado
+**Status:** ✅ Concluído
 
 ---
 
