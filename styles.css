@@ -731,6 +731,37 @@ section[id] {
     }
 }
 
+/* ===== BLOCO 13 — FOOTER ===== */
+footer {
+    position: relative;
+}
+
+footer a:focus-visible {
+    outline: 2px solid #5eead4;
+    outline-offset: 4px;
+    border-radius: 0.35rem;
+}
+
+footer #footer-nav-list a,
+footer #footer-services-list a,
+footer #footer-contact-list a {
+    display: inline-flex;
+    min-height: 2rem;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    footer .grid {
+        gap: 2.25rem;
+    }
+
+    footer #footer-nav-list,
+    footer #footer-services-list,
+    footer #footer-contact-list {
+        margin-top: 0.85rem;
+    }
+}
+
 /* ===== MOBILE EXPERIENCE ===== */
 html,
 body {
