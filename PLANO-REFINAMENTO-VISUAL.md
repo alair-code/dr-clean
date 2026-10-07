@@ -133,7 +133,7 @@ O visitante deve entender rapidamente **o que a Dr Clean faz, onde atende e como
 
 Uma página com fluxo visual natural, sem aparência de blocos colados.
 
-**Status:** 🔄 Em implementação
+**Status:** ✅ Concluído
 
 ---
 
