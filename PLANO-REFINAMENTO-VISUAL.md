@@ -370,7 +370,7 @@ Experiência acessível sem alterar a identidade visual.
 
 Código mais organizado, previsível e fácil de manter.
 
-**Status:** ⬜ Não iniciado
+**Status:** ✅ Concluído
 
 ---
 
