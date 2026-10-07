@@ -374,8 +374,20 @@
             });
 
             let frame = 0;
+            let animationId = 0;
+            let isVisible = true;
+            let isPageVisible = !document.hidden;
+
+            function shouldAnimate() {
+                return isVisible && isPageVisible;
+            }
 
             function tick() {
+                if (!shouldAnimate()) {
+                    animationId = 0;
+                    return;
+                }
+
                 frame++;
                 ctx.clearRect(0, 0, W, H);
                 for (const p of particles) {
@@ -390,8 +402,36 @@
                     ctx.fillStyle = p.color + p.alpha + ")";
                     ctx.fill();
                 }
-                requestAnimationFrame(tick);
+
+                animationId = requestAnimationFrame(tick);
             }
 
-            tick();
+            function startAnimation() {
+                if (shouldAnimate() && !animationId) {
+                    animationId = requestAnimationFrame(tick);
+                }
+            }
+
+            function updateVisibility() {
+                isPageVisible = !document.hidden;
+                if (shouldAnimate()) {
+                    startAnimation();
+                } else if (animationId) {
+                    cancelAnimationFrame(animationId);
+                    animationId = 0;
+                }
+            }
+
+            const visibilityObserver = new IntersectionObserver(
+                function (entries) {
+                    isVisible = entries[0].isIntersecting;
+                    updateVisibility();
+                },
+                { threshold: 0.05 }
+            );
+
+            visibilityObserver.observe(canvas);
+            document.addEventListener("visibilitychange", updateVisibility);
+
+            startAnimation();
         })();
