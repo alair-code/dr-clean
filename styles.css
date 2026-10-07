@@ -339,3 +339,161 @@ section[id] {
         transition: none !important;
     }
 }
+
+
+/* ===== BLOCO 05 — SEÇÕES E CARDS ===== */
+:where(#por-que-higienizar, #servicos, #como-funciona, #diferenciais) {
+    position: relative;
+}
+
+:where(#pain-grid, #services-grid, #steps-grid, #why-grid) {
+    align-items: stretch;
+}
+
+:where(#pain-grid, #services-grid, #steps-grid, #why-grid) > article {
+    min-width: 0;
+    height: 100%;
+    box-shadow: var(--shadow-soft);
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+}
+
+:where(#pain-grid, #services-grid, #steps-grid, #why-grid) > article:hover {
+    transform: translateY(-4px);
+    border-color: rgba(20, 184, 166, 0.28);
+    box-shadow: var(--shadow-premium);
+}
+
+#pain-grid > article {
+    position: relative;
+    overflow: hidden;
+    border-color: #e7e5e4;
+}
+
+#pain-grid > article::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 3px;
+    background: linear-gradient(90deg, #fb7185, #fda4af);
+    opacity: 0.9;
+}
+
+#pain-grid > article:nth-child(even) {
+    background: #fffdfd;
+}
+
+#pain-grid > article > div {
+    border: 1px solid rgba(244, 63, 94, 0.08);
+    box-shadow: 0 8px 24px rgba(244, 63, 94, 0.08);
+}
+
+#services-grid > article {
+    border-color: #e2e8f0;
+    background:
+        linear-gradient(180deg, rgba(248, 250, 252, 0.7), #fff 32%);
+}
+
+#services-grid > article::after {
+    content: "";
+    position: absolute;
+    left: 2rem;
+    right: 2rem;
+    bottom: 0;
+    height: 2px;
+    border-radius: 999px 999px 0 0;
+    background: linear-gradient(90deg, transparent, rgba(20, 184, 166, 0.45), transparent);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+#services-grid > article:hover::after {
+    opacity: 1;
+}
+
+#services-grid > article > div {
+    flex-shrink: 0;
+}
+
+#services-grid > article > a {
+    width: fit-content;
+    min-height: 44px;
+    padding: 0.5rem 0;
+}
+
+#steps-grid > article {
+    border-color: #e2e8f0;
+    background: #fff;
+}
+
+#steps-grid > article > span {
+    opacity: 0.9;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+#steps-grid > article:hover > span {
+    color: #ccfbf1;
+    transform: translateY(-2px);
+}
+
+#steps-grid > article > div {
+    position: relative;
+    z-index: 1;
+}
+
+#why-grid > article {
+    border-color: #dfe7e6;
+    background: linear-gradient(145deg, #ffffff 0%, #fbfffe 100%);
+}
+
+#why-grid > article:nth-child(2) {
+    background: linear-gradient(145deg, #ffffff 0%, #f8fffd 100%);
+}
+
+#why-grid > article:nth-child(3) {
+    background: linear-gradient(145deg, #ffffff 0%, #f7fffb 100%);
+}
+
+#why-grid > article:nth-child(4) {
+    background: linear-gradient(145deg, #ffffff 0%, #f3fffb 100%);
+}
+
+#why-grid > article > div {
+    border: 1px solid rgba(20, 184, 166, 0.08);
+}
+
+@media (max-width: 767px) {
+    :where(#pain-grid, #services-grid, #steps-grid, #why-grid) {
+        gap: 1rem;
+    }
+
+    :where(#pain-grid, #services-grid, #steps-grid, #why-grid) > article {
+        border-radius: 1.35rem;
+    }
+
+    #services-grid > article {
+        padding: 1.5rem;
+    }
+
+    #pain-grid > article,
+    #steps-grid > article,
+    #why-grid > article {
+        padding: 1.5rem;
+    }
+
+    #services-grid > article::after {
+        left: 1.5rem;
+        right: 1.5rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :where(#pain-grid, #services-grid, #steps-grid, #why-grid) > article,
+    #steps-grid > article > span,
+    #services-grid > article::after {
+        transition: none !important;
+    }
+}
