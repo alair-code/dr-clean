@@ -312,13 +312,14 @@
             }
         });
 
-        // ===== CANVAS: VÍDEO CURTO EM LOOP (EFEITO DE HIGIENIZAÇÃO) =====
+        // ===== CANVAS: PARTÍCULAS DECORATIVAS =====
         (function initDustCanvas() {
             const canvas = document.getElementById("dust-canvas");
             if (!canvas) return;
             if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
             const ctx = canvas.getContext("2d");
+            if (!ctx) return;
             let W = 0;
             let H = 0;
             const DPR = Math.min(window.devicePixelRatio || 1, 2);
