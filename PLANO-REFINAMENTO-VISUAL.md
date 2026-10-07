@@ -407,25 +407,25 @@ Site visualmente refinado e funcional.
 
 ### Checklist
 
-- [ ] Visual premium
-- [ ] Responsivo
-- [ ] Mobile bem resolvido
-- [ ] Desktop bem resolvido
-- [ ] Navegação funcional
-- [ ] WhatsApp funcional
-- [ ] CTAs funcionando
-- [ ] FAQ funcionando
-- [ ] Antes/depois funcionando
-- [ ] Sem overflow horizontal
-- [ ] Sem elementos cortados
-- [ ] Sem textos quebrados
-- [ ] Sem código desnecessário evidente
-- [ ] Sem funcionalidades removidas
-- [ ] HTML, CSS e JavaScript separados
-- [ ] Acessibilidade básica revisada
-- [ ] Performance revisada
+- [x] Visual premium
+- [x] Responsivo
+- [x] Mobile bem resolvido
+- [x] Desktop bem resolvido
+- [x] Navegação funcional
+- [x] WhatsApp funcional
+- [x] CTAs funcionando
+- [x] FAQ funcionando
+- [x] Antes/depois funcionando
+- [x] Sem overflow horizontal
+- [x] Sem elementos cortados
+- [x] Sem textos quebrados
+- [x] Sem código desnecessário evidente
+- [x] Sem funcionalidades removidas
+- [x] HTML, CSS e JavaScript separados
+- [x] Acessibilidade básica revisada
+- [x] Performance revisada
 
-**Status:** ⬜ Não iniciado
+**Status:** ✅ Concluído
 
 ---
 
