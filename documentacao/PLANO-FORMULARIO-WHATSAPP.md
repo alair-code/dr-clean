@@ -4,13 +4,13 @@
 Implementar no site Dr Clean um formulário profissional para o visitante solicitar orçamento pelo WhatsApp, gerando uma mensagem personalizada com os dados preenchidos.
 
 ## Regras do projeto
-- Alterar somente a branch `manutencao`.
-- Manter HTML5, CSS3 e JavaScript puro.
-- Não criar backend, banco de dados ou API.
-- Usar o número de WhatsApp já configurado no `script.js`.
-- Preservar o layout, identidade visual e funcionalidades existentes.
-- Implementar um bloco por vez.
-- Após cada bloco: revisar, testar e refinar antes de avançar.
+- [x] Alterar somente a branch `manutencao`.
+- [x] Manter HTML5, CSS3 e JavaScript puro.
+- [x] Não criar backend, banco de dados ou API.
+- [x] Usar o número de WhatsApp já configurado no `script.js`.
+- [x] Preservar o layout, identidade visual e funcionalidades existentes.
+- [x] Implementar um bloco por vez.
+- [x] Após cada bloco: revisar, testar e refinar antes de avançar.
 
 ---
 
@@ -18,14 +18,27 @@ Implementar no site Dr Clean um formulário profissional para o visitante solici
 **Objetivo:** analisar a estrutura atual e definir onde o formulário será inserido.
 
 ### Tarefas
-- [ ] Revisar `index.html`, `styles.css` e `script.js`.
-- [ ] Identificar a melhor seção para o formulário.
-- [ ] Verificar como o WhatsApp já é acionado.
-- [ ] Definir fluxo de preenchimento → validação → geração da mensagem → WhatsApp.
-- [ ] Garantir que não haverá conflito com funcionalidades existentes.
+- [x] Revisar `index.html`, `styles.css` e `script.js`.
+- [x] Identificar a melhor seção para o formulário.
+- [x] Verificar como o WhatsApp já é acionado.
+- [x] Definir fluxo de preenchimento → validação → geração da mensagem → WhatsApp.
+- [x] Garantir que não haverá conflito com funcionalidades existentes.
+
+### Resultado da auditoria
+- **Estrutura atual:** o site usa HTML5, CSS3 e JavaScript puro, com conteúdo dinâmico renderizado pelo `script.js`.
+- **WhatsApp existente:** a função `waUrl(message)` centraliza a geração do link `wa.me`; os botões existentes usam delegação de eventos com `data-wa-message` e `data-wa-service`.
+- **Número utilizado:** o formulário deverá reutilizar `CONFIG.whatsappNumber`, sem criar um segundo número ou uma nova configuração.
+- **Local recomendado:** inserir o formulário na seção **Contato**, antes do bloco de informações de contato/CTA final, mantendo o formulário próximo dos pontos de conversão já existentes. Não será criado um formulário no hero para evitar excesso de elementos na primeira dobra.
+- **Fluxo definido:** preenchimento → validação no frontend → montagem de mensagem personalizada → abertura do WhatsApp em nova aba/janela.
+- **Integração:** a nova lógica deverá reutilizar a função existente de URL do WhatsApp e evitar duplicação de código.
+- **Compatibilidade:** o botão flutuante, CTAs existentes, links de serviços, menu, FAQ e demais funcionalidades não devem ser alterados.
+- **Frontend apenas:** nenhum dado será armazenado no site e nenhuma API/backend será adicionada.
+- **Próxima etapa:** o Bloco 2 criará somente a estrutura HTML sem implementar ainda a montagem da mensagem ou a integração final.
 
 ### Resultado esperado
 Fluxo definido e pronto para implementação.
+
+**Status: ✅ Concluído e revisado.**
 
 ---
 
