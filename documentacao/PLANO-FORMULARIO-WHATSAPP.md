@@ -73,10 +73,18 @@ Fluxo definido, compatível com a arquitetura atual e pronto para implementaçã
 - Área `aria-live` foi preparada para mensagens de estado.
 - Nenhuma regra de CSS específica ou lógica de WhatsApp foi adicionada neste bloco.
 
+### Revisão do bloco
+- A estrutura foi conferida contra a seção **Contato** e não interfere nos CTAs, chips de contato ou demais elementos existentes.
+- O formulário permanece dentro do escopo do bloco: ainda não valida, monta mensagem nem abre o WhatsApp.
+- O uso de `type="button"` no CTA foi mantido para impedir um envio nativo sem tratamento antes dos Blocos 4–6.
+- Os controles usam classes responsivas do Tailwind já disponível no projeto, com grade em duas colunas no desktop e uma coluna em telas menores.
+- Não foram identificados campos duplicados, IDs conflitantes ou lógica JavaScript desnecessária para esta etapa.
+- A área de feedback permanece preparada para a validação futura, sem exibir mensagens artificiais nesta etapa.
+
 ### Resultado esperado
 Formulário estruturado, semântico e pronto para receber o comportamento e o refinamento visual dos próximos blocos.
 
-**Status: 🟡 Implementado e aguardando revisão.**
+**Status: ✅ Concluído, revisado e refinado.**
 
 ---
 
