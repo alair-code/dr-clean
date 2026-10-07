@@ -188,14 +188,23 @@ Mensagem estruturada e pronta para ser integrada ao WhatsApp.
 - O WhatsApp é aberto em nova aba/janela após a validação dos dados.
 - O botão flutuante e os demais CTAs existentes permanecem independentes e preservados.
 - Não foi criado backend, armazenamento ou nova integração externa.
-- O clique não executa processamento assíncrono nem cria uma segunda tentativa automática, mantendo o fluxo simples e evitando múltiplos envios pelo próprio código.
+- O botão recebe um bloqueio temporário de 1,5 segundo para evitar aberturas repetidas por cliques consecutivos.
+- O código verifica se a nova janela foi bloqueada pelo navegador e informa o usuário em vez de afirmar que o WhatsApp foi aberto.
 
 ### Resultado esperado
 Clique no botão do formulário abre o WhatsApp com todos os dados preenchidos.
 
-**Status: 🟡 Implementado e aguardando revisão.**
+**Status: ✅ Concluído, revisado e refinado.**
 
 ---
+
+
+### Revisão do bloco
+- A integração reutiliza a infraestrutura de WhatsApp já existente no projeto.
+- A abertura ocorre diretamente a partir do clique do usuário, preservando compatibilidade com bloqueadores de pop-up em condições normais.
+- O bloqueio temporário evita múltiplas aberturas acidentais sem deixar o botão permanentemente desabilitado.
+- O formulário continua responsivo porque a mudança é comportamental e não altera o layout.
+- Nenhuma funcionalidade existente foi substituída ou duplicada.
 
 ## Bloco 7 — Experiência de uso e conversão
 **Objetivo:** tornar o formulário simples e orientado à conversão.
