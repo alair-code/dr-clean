@@ -405,10 +405,15 @@
         }
 
         quoteSubmit.addEventListener("click", function () {
-            if (validateQuoteForm()) {
-                preparedQuoteMessage = buildQuoteMessage();
-                setQuoteStatus("Dados válidos. Mensagem de orçamento preparada para o próximo passo.", "success");
+            if (!validateQuoteForm()) {
+                return;
             }
+
+            preparedQuoteMessage = buildQuoteMessage();
+            const whatsappUrl = waUrl(preparedQuoteMessage);
+
+            window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+            setQuoteStatus("Mensagem preparada. O WhatsApp foi aberto para você concluir o envio.", "success");
         });
 
         quoteForm.addEventListener("input", function (event) {
