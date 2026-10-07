@@ -38,7 +38,7 @@ O refinamento deve funcionar muito bem em **celular, tablet e desktop**, sem per
 
 Ter um diagnóstico claro dos pontos que precisam de refinamento.
 
-**Status:** 🔄 Em implementação
+**Status:** ✅ Concluído
 
 ---
 
@@ -155,7 +155,7 @@ Uma página com fluxo visual natural, sem aparência de blocos colados.
 
 Componente visualmente atraente e fácil de usar no celular.
 
-**Status:** ⬜ Não iniciado
+**Status:** ✅ Concluído
 
 ---
 
