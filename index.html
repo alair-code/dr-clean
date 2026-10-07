@@ -85,10 +85,10 @@
         <p class="bg-amber-100 px-4 py-2 text-center text-sm text-amber-800">Habilite o JavaScript para visualizar todo o conteúdo desta página.</p>
     </noscript>
 
-    <header id="site-header" class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-md transition-all duration-300">
+    <header id="site-header" class="site-header fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-md transition-all duration-300">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="flex h-16 items-center justify-between gap-4 lg:h-20">
-                <a href="#inicio" class="flex items-center gap-3" aria-label="Dr Clean — voltar ao início">
+            <div class="flex h-16 items-center justify-between gap-3 lg:h-20 lg:gap-6">
+                <a href="#inicio" class="site-brand flex items-center gap-3" aria-label="Dr Clean — voltar ao início">
                     <svg width="40" height="40" viewBox="0 0 48 48" fill="none" aria-hidden="true" class="shrink-0">
                         <defs>
                             <linearGradient id="logo-grad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
@@ -100,25 +100,25 @@
                         <path d="M24 9c4.6 6.5 8.2 11.6 8.2 16.4a8.2 8.2 0 1 1-16.4 0C15.8 20.6 19.4 15.5 24 9Z" fill="#f0fdfa"/>
                         <path d="M33.5 8.5l1.2 3 3 1.2-3 1.2-1.2 3-1.2-3-3-1.2 3-1.2 1.2-3Z" fill="#fbbf24"/>
                     </svg>
-                    <span class="font-display text-xl font-bold text-white">Dr<span class="text-teal-400">Clean</span></span>
+                    <span class="font-display text-xl font-bold tracking-tight text-white">Dr<span class="text-teal-400">Clean</span></span>
                 </a>
                 <nav class="hidden lg:block" aria-label="Navegação principal">
-                    <ul id="nav-list" class="flex items-center gap-7"></ul>
+                    <ul id="nav-list" class="flex items-center gap-1"></ul>
                 </nav>
                 <div class="flex items-center gap-3">
                     <a href="#" data-wa-message="Olá, Dr Clean! Vim pelo site e gostaria de solicitar um orçamento."
-                       class="hidden items-center gap-2 rounded-full bg-teal-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-teal-500/30 transition-all hover:bg-teal-400 hover:shadow-teal-400/40 lg:inline-flex"
+                       class="header-cta hidden items-center gap-2 rounded-full bg-teal-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-teal-500/25 transition-all hover:-translate-y-0.5 hover:bg-teal-400 hover:shadow-teal-400/35 focus-visible:outline-offset-4 lg:inline-flex"
                        aria-label="Solicitar orçamento pelo WhatsApp">
                         <i class="fab fa-whatsapp text-base"></i> Orçamento
                     </a>
-                    <button id="menu-btn" type="button" class="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white transition-colors hover:bg-white/10 lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu">
+                    <button id="menu-btn" type="button" class="menu-toggle flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white transition-all hover:border-teal-400/40 hover:bg-teal-400/10 lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu">
                         <i class="fas fa-bars text-lg" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden border-t border-white/10 bg-slate-950/95 backdrop-blur-lg lg:hidden">
-            <ul id="mobile-nav-list" class="px-3 py-4"></ul>
+        <div id="mobile-menu" class="mobile-menu hidden max-h-[calc(100svh-4rem)] overflow-y-auto border-t border-white/10 bg-slate-950/95 backdrop-blur-lg lg:hidden">
+            <ul id="mobile-nav-list" class="px-3 py-3"></ul>
             <div class="px-4 pb-5">
                 <a href="#" data-wa-message="Olá, Dr Clean! Vim pelo site e gostaria de solicitar um orçamento."
                    class="flex items-center justify-center gap-2 rounded-xl bg-teal-500 px-4 py-3 font-semibold text-white"
