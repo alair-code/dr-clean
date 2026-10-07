@@ -278,7 +278,7 @@ O site deve parecer intencionalmente projetado para desktop, e não apenas ampli
 
 Sensação de acabamento premium, sem transformar o site em uma demonstração de efeitos.
 
-**Status:** ⬜ Não iniciado
+**Status:** ✅ Concluído
 
 ---
 
