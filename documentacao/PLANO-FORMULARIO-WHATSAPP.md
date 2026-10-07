@@ -152,14 +152,23 @@ Usuário recebe orientação clara e só prossegue com dados mínimos válidos.
 Saudação + identificação + serviço + tipo de estofado + quantidade + localização + período + observação.
 
 ### Tarefas
-- [ ] Criar função exclusiva para montar a mensagem.
-- [ ] Usar os dados reais preenchidos.
-- [ ] Manter texto profissional e objetivo.
-- [ ] Codificar corretamente a mensagem para URL.
-- [ ] Evitar informações vazias ou desnecessárias.
+- [x] Criar função exclusiva para montar a mensagem.
+- [x] Usar os dados reais preenchidos.
+- [x] Manter texto profissional e objetivo.
+- [x] Preparar a mensagem em texto puro; a codificação para URL permanece centralizada em `waUrl()` no Bloco 6.
+- [x] Evitar informações vazias ou desnecessárias.
+
+### Revisão do bloco
+- A mensagem utiliza somente dados já validados pelo Bloco 4.
+- A observação é adicionada somente quando preenchida.
+- Não há abertura do WhatsApp neste bloco, preservando a separação de responsabilidades.
+- A codificação da mensagem não foi duplicada: continuará centralizada em `waUrl()` durante a integração.
+- O conteúdo permanece curto, profissional e adequado ao atendimento pelo WhatsApp.
 
 ### Resultado esperado
-Mensagem pronta para ser enviada pelo WhatsApp.
+Mensagem estruturada e pronta para ser integrada ao WhatsApp.
+
+**Status: ✅ Concluído, revisado e refinado.**
 
 ---
 
