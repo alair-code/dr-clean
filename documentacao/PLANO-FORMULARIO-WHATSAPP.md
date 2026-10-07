@@ -56,14 +56,27 @@ Fluxo definido, compatível com a arquitetura atual e pronto para implementaçã
 - Observação opcional
 
 ### Tarefas
-- [ ] Criar formulário semântico.
-- [ ] Usar labels associados aos campos.
-- [ ] Definir campos obrigatórios.
-- [ ] Criar botão de envio com CTA claro.
-- [ ] Adicionar mensagens de estado/feedback quando necessário.
+- [x] Criar formulário semântico.
+- [x] Usar labels associados aos campos.
+- [x] Definir campos obrigatórios.
+- [x] Criar botão de ação com CTA claro.
+- [x] Adicionar área de feedback preparada para a próxima etapa.
+
+### Implementação
+- Formulário inserido na seção **Contato**, sem alterar os CTAs existentes.
+- Campos estruturados: nome, serviço, tipo de estofado, quantidade, cidade/bairro, período e observação opcional.
+- Labels estão associados aos respectivos controles por `for`/id.
+- Campos obrigatórios usam `required` e `aria-required`.
+- Quantidade aceita somente valores inteiros a partir de 1.
+- Observação possui limite de 500 caracteres.
+- Botão usa `type="button"` nesta etapa para evitar submissão/recarregamento antes da implementação da lógica nos próximos blocos.
+- Área `aria-live` foi preparada para mensagens de estado.
+- Nenhuma regra de CSS específica ou lógica de WhatsApp foi adicionada neste bloco.
 
 ### Resultado esperado
-Formulário estruturado e funcional no HTML.
+Formulário estruturado, semântico e pronto para receber o comportamento e o refinamento visual dos próximos blocos.
+
+**Status: 🟡 Implementado e aguardando revisão.**
 
 ---
 
