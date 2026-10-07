@@ -388,6 +388,55 @@ section[id] {
 }
 
 
+/* Mobile hero illustration: keep the same animated sofa visual used on desktop. */
+@media (max-width: 1023px) {
+    .hero-visual {
+        width: 100%;
+        max-width: 34rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-visual > div {
+        width: min(100%, 28rem);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-visual svg {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-visual > div > div[class*="-right-"],
+    .hero-visual > div > div[class*="-left-"] {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 639px) {
+    .hero-visual {
+        margin-top: 0.5rem;
+    }
+
+    .hero-visual > div {
+        width: min(100%, 22rem);
+    }
+
+    .hero-visual > div > div[class*="-right-"] {
+        right: 0;
+    }
+
+    .hero-visual > div > div[class*="-left-"] {
+        left: 0;
+    }
+
+    .hero-visual > div > div[class*="bottom-"] {
+        bottom: 1.5rem;
+    }
+}
+
 /* ===== HERO ===== */
 .hero-actions a {
     min-height: 52px;
