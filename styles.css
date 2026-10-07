@@ -277,7 +277,14 @@ section[id] {
 }
 
 @media (max-width: 639px) {
-    .hero-bg {
+    /* Keep the highlighted hero phrase visible on mobile. */
+    #inicio .text-gradient {
+        background: none;
+        color: #99f6e4;
+        -webkit-text-fill-color: #99f6e4;
+        display: inline;
+    }
+
         background:
             radial-gradient(28rem 24rem at 100% 0%, rgba(20, 184, 166, 0.24), transparent 62%),
             linear-gradient(160deg, #020617 0%, #071a24 52%, #0b2a30 100%);
