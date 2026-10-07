@@ -326,7 +326,7 @@ Fluxo funcionando de ponta a ponta.
 - HTML, CSS e JavaScript revisados em conjunto, com foco no formulário e na integração com WhatsApp.
 - O formulário possui uma única instância, botão com `type="button"` e validação própria antes da abertura do WhatsApp.
 - Não foram encontrados campos duplicados nem referências quebradas no fluxo do formulário.
-- Foi removida a regra CSS `.quote-form-actions`, que não era utilizada pelo HTML atual.
+- Foi removida completamente a regra CSS `.quote-form-actions`, inclusive seu trecho responsivo, que não era utilizado pelo HTML atual.
 - O feedback de campos continua consistente em texto, seleção e teclado.
 - A responsividade permanece baseada nas classes responsivas existentes e nos ajustes mobile do formulário.
 - A integração usa o número centralizado em `CONFIG.whatsappNumber` e mantém o bloqueio temporário contra abertura duplicada.
@@ -336,6 +336,9 @@ Fluxo funcionando de ponta a ponta.
 Formulário pronto para uso em produção, sem alterar a `main`.
 
 **Status: ✅ Concluído, revisado e refinado.**
+
+### Revisão adicional
+- Nova conferência confirmou que não restam ocorrências de `.quote-form-actions` no CSS.
 
 ---
 
