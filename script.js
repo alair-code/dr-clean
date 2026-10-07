@@ -244,12 +244,21 @@
 
         // ===== HEADER SCROLL =====
         const header = document.getElementById("site-header");
-        window.addEventListener("scroll", function () {
+        function updateHeaderState() {
             const scrolled = window.scrollY > 40;
-            header.classList.toggle("bg-slate-950/90", scrolled);
-            header.classList.toggle("shadow-xl", scrolled);
-            header.classList.toggle("shadow-slate-950/30", scrolled);
-        }, { passive: true });
+            header.classList.toggle("is-scrolled", scrolled);
+        }
+
+        updateHeaderState();
+        window.addEventListener("scroll", updateHeaderState, { passive: true });
+
+        window.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") closeMobileMenu();
+        });
+
+        window.addEventListener("resize", function () {
+            if (window.innerWidth >= 1024) closeMobileMenu();
+        });
 
         // ===== BEFORE / AFTER SLIDER =====
         const baRange = document.getElementById("ba-range");
