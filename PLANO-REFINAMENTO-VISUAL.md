@@ -324,7 +324,7 @@ Visual mais realista e profissional, sem imagens que pareçam desconectadas do n
 
 Footer limpo, elegante e coerente com o restante do site.
 
-**Status:** ⬜ Não iniciado
+**Status:** ✅ Concluído
 
 ---
 
