@@ -397,7 +397,7 @@ Código mais organizado, previsível e fácil de manter.
 
 Site visualmente refinado e funcional.
 
-**Status:** ⬜ Não iniciado
+**Status:** ✅ Concluído
 
 ---
 
