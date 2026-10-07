@@ -291,6 +291,169 @@
         });
         updateBeforeAfter(50);
 
+        // ===== FORMULÁRIO DE ORÇAMENTO — BLOCO 4 =====
+        const quoteForm = document.getElementById("orcamento-form");
+        const quoteSubmit = document.getElementById("orcamento-form-submit");
+        const quoteStatus = document.getElementById("orcamento-form-status");
+
+        function getQuoteField(id) {
+            return document.getElementById(id);
+        }
+
+        function setQuoteStatus(message, type) {
+            quoteStatus.textContent = message;
+            quoteStatus.className = "mt-3 text-sm";
+            quoteStatus.classList.add(type === "error" ? "text-rose-300" : "text-teal-300");
+        }
+
+        function clearQuoteFieldErrors() {
+            quoteForm.querySelectorAll(".quote-form-control").forEach(function (field) {
+                field.removeAttribute("aria-invalid");
+                field.removeAttribute("aria-describedby");
+            });
+        }
+
+        function validateQuoteForm() {
+            clearQuoteFieldErrors();
+
+            const fields = [
+                { id: "orcamento-nome", label: "Nome", minLength: 2 },
+                { id: "orcamento-servico", label: "Serviço desejado" },
+                { id: "orcamento-estofado", label: "Tipo de estofado", minLength: 2 },
+                { id: "orcamento-quantidade", label: "Quantidade", numeric: true },
+                { id: "orcamento-localizacao", label: "Cidade/bairro", minLength: 2 },
+                { id: "orcamento-periodo", label: "Melhor período para atendimento" }
+            ];
+
+            for (const fieldConfig of fields) {
+                const field = getQuoteField(fieldConfig.id);
+                const value = field.value.trim();
+
+                if (!value) {
+                    field.setAttribute("aria-invalid", "true");
+                    field.setAttribute("aria-describedby", "orcamento-form-status");
+                    setQuoteStatus("Preencha o campo: " + fieldConfig.label + ".", "error");
+                    field.focus();
+                    return false;
+                }
+
+                if (fieldConfig.minLength && value.length < fieldConfig.minLength) {
+                    field.setAttribute("aria-invalid", "true");
+                    field.setAttribute("aria-describedby", "orcamento-form-status");
+                    setQuoteStatus("Informe " + fieldConfig.label.toLowerCase() + " com pelo menos " + fieldConfig.minLength + " caracteres.", "error");
+                    field.focus();
+                    return false;
+                }
+
+                if (fieldConfig.numeric) {
+                    const quantity = Number(value);
+                    if (!Number.isInteger(quantity) || quantity < 1) {
+                        field.setAttribute("aria-invalid", "true");
+                        field.setAttribute("aria-describedby", "orcamento-form-status");
+                        setQuoteStatus("Informe uma quantidade inteira maior que zero.", "error");
+                        field.focus();
+                        return false;
+                    }
+                }
+            }
+
+            const observation = getQuoteField("orcamento-observacao").value;
+            if (observation.length > 500) {
+                const field = getQuoteField("orcamento-observacao");
+                field.setAttribute("aria-invalid", "true");
+                field.setAttribute("aria-describedby", "orcamento-form-status");
+                setQuoteStatus("A observação deve ter no máximo 500 caracteres.", "error");
+                field.focus();
+                return false;
+            }
+
+            setQuoteStatus("", "success");
+            return true;
+        }
+
+        // ===== FORMATAÇÃO DA MENSAGEM — BLOCO 5 =====
+        let preparedQuoteMessage = "";
+
+        function buildQuoteMessage() {
+            const nome = getQuoteField("orcamento-nome").value.trim();
+            const servico = getQuoteField("orcamento-servico").value.trim();
+            const tipoEstofado = getQuoteField("orcamento-estofado").value.trim();
+            const quantidade = getQuoteField("orcamento-quantidade").value.trim();
+            const localizacao = getQuoteField("orcamento-localizacao").value.trim();
+            const periodo = getQuoteField("orcamento-periodo").value.trim();
+            const observacao = getQuoteField("orcamento-observacao").value.trim();
+
+            const lines = [
+                "Olá, Dr Clean! Gostaria de solicitar um orçamento.",
+                "",
+                "*Dados do cliente*",
+                "Nome: " + nome,
+                "Cidade/bairro: " + localizacao,
+                "",
+                "*Detalhes do serviço*",
+                "Serviço: " + servico,
+                "Tipo de estofado: " + tipoEstofado,
+                "Quantidade: " + quantidade,
+                "Melhor período: " + periodo
+            ];
+
+            if (observacao) {
+                lines.push("", "*Observação*", observacao);
+            }
+
+            return lines.join("\n");
+        }
+
+        let quoteOpeningLocked = false;
+
+        quoteSubmit.addEventListener("click", function () {
+            if (quoteOpeningLocked || !validateQuoteForm()) {
+                return;
+            }
+
+            preparedQuoteMessage = buildQuoteMessage();
+            const whatsappUrl = waUrl(preparedQuoteMessage);
+
+            quoteOpeningLocked = true;
+            quoteSubmit.disabled = true;
+            quoteSubmit.setAttribute("aria-disabled", "true");
+
+            const whatsappWindow = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+
+            if (whatsappWindow) {
+                setQuoteStatus("Mensagem preparada. O WhatsApp foi aberto para você concluir o envio.", "success");
+            } else {
+                setQuoteStatus("Não foi possível abrir o WhatsApp automaticamente. Verifique se o navegador bloqueou a nova janela e tente novamente.", "error");
+            }
+
+            window.setTimeout(function () {
+                quoteOpeningLocked = false;
+                quoteSubmit.disabled = false;
+                quoteSubmit.removeAttribute("aria-disabled");
+            }, 1500);
+        });
+
+        function clearQuoteFieldError(field) {
+            if (!field || !field.classList.contains("quote-form-control")) {
+                return;
+            }
+
+            field.removeAttribute("aria-invalid");
+            field.removeAttribute("aria-describedby");
+
+            if (quoteStatus.classList.contains("text-rose-300")) {
+                setQuoteStatus("", "success");
+            }
+        }
+
+        quoteForm.addEventListener("input", function (event) {
+            clearQuoteFieldError(event.target);
+        });
+
+        quoteForm.addEventListener("change", function (event) {
+            clearQuoteFieldError(event.target);
+        });
+
         // ===== EVENT DELEGATION =====
         document.addEventListener("click", function (e) {
             const externalLink = e.target.closest("a[data-external]");

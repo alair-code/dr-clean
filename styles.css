@@ -1293,3 +1293,100 @@ body {
         animation: none !important;
     }
 }
+
+
+/* ===== BLOCO 3 — FORMULÁRIO DE ORÇAMENTO ===== */
+.quote-form {
+    box-shadow: 0 24px 70px rgba(2, 6, 23, 0.18);
+}
+
+.quote-form-label {
+    letter-spacing: 0.005em;
+}
+
+.quote-form-control {
+    min-height: 3rem;
+    border-color: rgba(255, 255, 255, 0.12);
+    background-color: rgba(15, 23, 42, 0.72);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.quote-form-control:hover {
+    border-color: rgba(94, 234, 212, 0.28);
+}
+
+.quote-form-control:focus {
+    border-color: rgba(45, 212, 191, 0.8);
+    background-color: rgba(15, 23, 42, 0.9);
+    box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.12);
+}
+
+.quote-form-control:focus-visible {
+    outline: 2px solid rgba(94, 234, 212, 0.9);
+    outline-offset: 1px;
+}
+
+
+.quote-form-control[aria-invalid="true"] {
+    border-color: rgba(251, 113, 133, 0.8);
+    box-shadow: 0 0 0 3px rgba(251, 113, 133, 0.12);
+}
+
+.quote-form-control[aria-invalid="true"]:focus {
+    border-color: rgba(251, 113, 133, 0.95);
+    box-shadow: 0 0 0 3px rgba(251, 113, 133, 0.16);
+}
+
+.quote-form-control:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+.quote-form-control::placeholder {
+    color: rgb(100 116 139);
+}
+
+.quote-form-control option {
+    background: #0f172a;
+    color: #fff;
+}
+
+.quote-form-submit {
+    min-height: 3.25rem;
+    box-shadow: 0 12px 28px rgba(20, 184, 166, 0.2);
+}
+
+.quote-form-submit:disabled {
+    cursor: wait;
+    opacity: 0.7;
+    transform: none;
+}
+
+.quote-form-submit:focus-visible {
+    outline: 3px solid #5eead4;
+    outline-offset: 4px;
+}
+
+@media (max-width: 639px) {
+    .quote-form {
+        margin-top: 2rem;
+        padding: 1.125rem;
+        border-radius: 1.5rem;
+    }
+
+    .quote-form-control {
+        min-height: 3.25rem;
+        font-size: 1rem;
+    }
+
+    .quote-form-submit {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .quote-form-control,
+    .quote-form-submit {
+        transition: none;
+    }
+}
