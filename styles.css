@@ -304,7 +304,7 @@ section[id] {
     }
 
     #inicio h1 {
-        max-width: 20rem;
+        max-width: 22rem;
         font-size: clamp(2.25rem, 10vw, 3rem);
         line-height: 1.08;
     }
@@ -312,6 +312,10 @@ section[id] {
     #inicio p.mt-6 {
         font-size: 1rem;
         line-height: 1.7;
+    }
+
+    .hero-actions {
+        width: 100%;
     }
 
     .hero-actions a {
