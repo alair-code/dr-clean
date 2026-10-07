@@ -847,8 +847,13 @@ body {
     filter: saturate(1.04) brightness(1.02);
 }
 
+.before-after-frame {
+    background: linear-gradient(135deg, #0f172a, #134e4a);
+}
+
 .before-after-frame img {
     max-width: 100%;
+    object-position: center;
 }
 
 @media (prefers-reduced-motion: reduce) {
