@@ -85,7 +85,7 @@ O site deve parecer profissional e premium sem ficar exagerado.
 
 Header moderno, discreto e fácil de usar em qualquer dispositivo.
 
-**Status:** ⬜ Não iniciado
+**Status:** 🔄 Em implementação
 
 ---
 
