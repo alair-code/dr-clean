@@ -138,6 +138,7 @@ Formulário visualmente integrado, responsivo e preparado para receber a valida�
 - Erros são exibidos no status do formulário e o campo inválido recebe foco.
 - O campo inválido recebe aria-invalid e referencia a mensagem de status com aria-describedby.
 - A validação não abre o WhatsApp e não monta a mensagem, mantendo o escopo do bloco.
+- Campos inválidos recebem destaque visual adicional por meio de aria-invalid, mantendo a indicação acessível e consistente com o tema.
 
 ### Resultado esperado
 Usuário recebe orientação clara e só prossegue com dados mínimos válidos.
