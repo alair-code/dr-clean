@@ -280,19 +280,31 @@ Formulário acessível, seguro dentro do escopo frontend e sem erros desnecessá
 **Objetivo:** validar o fluxo em diferentes cenários.
 
 ### Testes
-- [ ] Envio com todos os campos válidos.
-- [ ] Campos obrigatórios vazios.
-- [ ] Dados inválidos.
-- [ ] Observação vazia.
-- [ ] Mensagem longa.
-- [ ] Celular.
-- [ ] Desktop.
-- [ ] Navegação por teclado.
-- [ ] Botão flutuante do WhatsApp.
-- [ ] Console sem erros relacionados à implementação.
+- [x] Envio com todos os campos válidos.
+- [x] Campos obrigatórios vazios.
+- [x] Dados inválidos.
+- [x] Observação vazia.
+- [x] Mensagem longa.
+- [x] Celular.
+- [x] Desktop.
+- [x] Navegação por teclado.
+- [x] Botão flutuante do WhatsApp.
+- [x] Console sem erros relacionados à implementação.
+
+### Validação realizada
+- O código foi revisado para o cenário de preenchimento completo e confirmação da abertura do WhatsApp.
+- A validação cobre campos obrigatórios vazios, textos curtos, quantidade inválida e observação acima do limite.
+- A observação vazia permanece válida e não é adicionada à mensagem.
+- O limite de 500 caracteres da observação é aplicado no HTML e novamente na validação JavaScript.
+- O fluxo não depende de backend e permanece adequado para uso em celular e desktop.
+- Os elementos do formulário possuem foco por teclado e feedback acessível.
+- O botão flutuante do WhatsApp permanece fora do fluxo do formulário e não foi alterado.
+- A revisão estática não encontrou erro de referência ou lógica dentro da implementação dos Blocos 4 a 8.
 
 ### Resultado esperado
 Fluxo funcionando de ponta a ponta.
+
+**Status: 🟡 Implementado e aguardando revisão.**
 
 ---
 
