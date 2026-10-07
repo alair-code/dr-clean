@@ -258,14 +258,23 @@ Fluxo rápido, claro e profissional para geração de leads.
 - O projeto mantém suporte a `prefers-reduced-motion`, sem adicionar animações ao fluxo do formulário.
 - Os dados digitados são tratados como texto e enviados por `encodeURIComponent()` através de `waUrl()`, sem uso de `innerHTML` para conteúdo do usuário.
 - Não foram adicionados dados sensíveis nem armazenamento persistente; o formulário trabalha apenas com informações necessárias ao orçamento.
-- A revisão estática do fluxo não identificou chamadas ou alterações que introduzam erros de console no bloco.
+- A revisão do código não identificou referências ausentes, manipulação insegura dos dados do formulário ou operações novas que exijam mensagens de console.
 
 ### Resultado esperado
 Formulário acessível, seguro dentro do escopo frontend e sem erros desnecessários.
 
-**Status: 🟡 Implementado e aguardando revisão.**
+**Status: ✅ Concluído, revisado e refinado.**
 
 ---
+
+
+### Revisão do bloco
+- A estrutura de acessibilidade foi conferida após os refinamentos dos Blocos 6 e 7.
+- O `role="status"` permanece compatível com a mensagem de erro e com a confirmação de abertura do WhatsApp.
+- O conteúdo digitado pelo usuário continua sendo inserido apenas como texto (`textContent`) e na mensagem codificada para a URL, sem renderização HTML.
+- O uso de `innerHTML` existente em outras partes do `script.js` não participa da construção da mensagem do orçamento e não recebe os campos do formulário.
+- O botão utiliza `disabled` nativo durante o bloqueio temporário, preservando navegação e comportamento acessível por teclado.
+- Não foram necessárias alterações adicionais de CSS: o suporte a foco e `prefers-reduced-motion` já cobre o componente.
 
 ## Bloco 9 — Testes completos
 **Objetivo:** validar o fluxo em diferentes cenários.
