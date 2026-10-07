@@ -635,6 +635,51 @@ section[id] {
     }
 }
 
+/* ===== DESKTOP / LARGE SCREENS ===== */
+@media (min-width: 1280px) {
+    .hero-actions a {
+        min-width: 12.5rem;
+    }
+
+    #pain-grid,
+    #services-grid,
+    #steps-grid,
+    #why-grid {
+        gap: 1.25rem;
+    }
+
+    #pain-grid > article,
+    #services-grid > article,
+    #steps-grid > article,
+    #why-grid > article {
+        min-height: 100%;
+    }
+
+    #faq {
+        scroll-margin-top: 6rem;
+    }
+
+    .before-after-frame {
+        max-width: 64rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 1536px) {
+    #inicio > .relative.z-10 {
+        max-width: 88rem;
+    }
+
+    #inicio h1 {
+        max-width: 48rem;
+    }
+
+    .hero-checks {
+        max-width: 52rem;
+    }
+}
+
 /* ===== MOBILE EXPERIENCE ===== */
 html,
 body {
