@@ -1367,12 +1367,6 @@ body {
     outline-offset: 4px;
 }
 
-.quote-form-actions {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-}
-
 @media (min-width: 640px) {
     .quote-form-actions {
         align-items: flex-start;
