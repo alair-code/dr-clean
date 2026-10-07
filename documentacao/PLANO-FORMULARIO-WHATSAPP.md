@@ -128,6 +128,17 @@ Formulário visualmente integrado, responsivo e preparado para receber a valida�
 - [ ] Informar erros de forma clara.
 - [ ] Impedir envio quando houver dados inválidos.
 
+### Implementação
+- Adicionada validação frontend exclusiva para o formulário de orçamento.
+- Campos obrigatórios são verificados antes de prosseguir.
+- Nome, tipo de estofado e cidade/bairro exigem conteúdo mínimo de 2 caracteres.
+- Quantidade aceita somente número inteiro maior que zero.
+- Serviço e período precisam ter uma opção selecionada.
+- Observação continua opcional, mas respeita o limite de 500 caracteres.
+- Erros são exibidos no status do formulário e o campo inválido recebe foco.
+- O campo inválido recebe aria-invalid e referencia a mensagem de status com aria-describedby.
+- A validação não abre o WhatsApp e não monta a mensagem, mantendo o escopo do bloco.
+
 ### Resultado esperado
 Usuário recebe orientação clara e só prossegue com dados mínimos válidos.
 
