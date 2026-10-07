@@ -371,9 +371,43 @@
             return true;
         }
 
+        // ===== FORMATAÇÃO DA MENSAGEM — BLOCO 5 =====
+        let preparedQuoteMessage = "";
+
+        function buildQuoteMessage() {
+            const nome = getQuoteField("orcamento-nome").value.trim();
+            const servico = getQuoteField("orcamento-servico").value.trim();
+            const tipoEstofado = getQuoteField("orcamento-estofado").value.trim();
+            const quantidade = getQuoteField("orcamento-quantidade").value.trim();
+            const localizacao = getQuoteField("orcamento-localizacao").value.trim();
+            const periodo = getQuoteField("orcamento-periodo").value.trim();
+            const observacao = getQuoteField("orcamento-observacao").value.trim();
+
+            const lines = [
+                "Olá, Dr Clean! Gostaria de solicitar um orçamento.",
+                "",
+                "*Dados do cliente*",
+                "Nome: " + nome,
+                "Cidade/bairro: " + localizacao,
+                "",
+                "*Detalhes do serviço*",
+                "Serviço: " + servico,
+                "Tipo de estofado: " + tipoEstofado,
+                "Quantidade: " + quantidade,
+                "Melhor período: " + periodo
+            ];
+
+            if (observacao) {
+                lines.push("", "*Observação*", observacao);
+            }
+
+            return lines.join("\n");
+        }
+
         quoteSubmit.addEventListener("click", function () {
             if (validateQuoteForm()) {
-                setQuoteStatus("Dados preenchidos corretamente. Próxima etapa: preparar o orçamento.", "success");
+                preparedQuoteMessage = buildQuoteMessage();
+                setQuoteStatus("Dados válidos. Mensagem de orçamento preparada para o próximo passo.", "success");
             }
         });
 
