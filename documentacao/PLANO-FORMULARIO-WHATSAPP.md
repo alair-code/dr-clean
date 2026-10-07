@@ -25,20 +25,21 @@ Implementar no site Dr Clean um formulário profissional para o visitante solici
 - [x] Garantir que não haverá conflito com funcionalidades existentes.
 
 ### Resultado da auditoria
-- **Estrutura atual:** o site usa HTML5, CSS3 e JavaScript puro, com conteúdo dinâmico renderizado pelo `script.js`.
-- **WhatsApp existente:** a função `waUrl(message)` centraliza a geração do link `wa.me`; os botões existentes usam delegação de eventos com `data-wa-message` e `data-wa-service`.
+- **Estrutura atual:** o site usa HTML5, CSS3 e JavaScript puro. Parte relevante do conteúdo é montada dinamicamente pelo `script.js` por meio de funções de renderização e montagem dos elementos.
+- **WhatsApp existente:** a função `waUrl(message)` centraliza a geração do link `wa.me`. Os CTAs existentes utilizam atributos `data-wa-message` ou `data-wa-service`, tratados por delegação de eventos no documento.
 - **Número utilizado:** o formulário deverá reutilizar `CONFIG.whatsappNumber`, sem criar um segundo número ou uma nova configuração.
-- **Local recomendado:** inserir o formulário na seção **Contato**, antes do bloco de informações de contato/CTA final, mantendo o formulário próximo dos pontos de conversão já existentes. Não será criado um formulário no hero para evitar excesso de elementos na primeira dobra.
+- **Local recomendado:** inserir o formulário dentro da seção **Contato**, antes do bloco atual de CTA e informações de contato, mantendo a nova conversão próxima dos pontos de contato existentes. O formulário não será colocado no hero para preservar a hierarquia e evitar excesso de elementos na primeira dobra.
 - **Fluxo definido:** preenchimento → validação no frontend → montagem de mensagem personalizada → abertura do WhatsApp em nova aba/janela.
-- **Integração:** a nova lógica deverá reutilizar a função existente de URL do WhatsApp e evitar duplicação de código.
-- **Compatibilidade:** o botão flutuante, CTAs existentes, links de serviços, menu, FAQ e demais funcionalidades não devem ser alterados.
-- **Frontend apenas:** nenhum dado será armazenado no site e nenhuma API/backend será adicionada.
-- **Próxima etapa:** o Bloco 2 criará somente a estrutura HTML sem implementar ainda a montagem da mensagem ou a integração final.
+- **Integração:** a nova lógica deverá reutilizar `waUrl()` e evitar duplicação da lógica de criação do link.
+- **Compatibilidade:** o botão flutuante, CTAs existentes, links de serviços, menu, FAQ, slider antes/depois e demais funcionalidades devem permanecer inalterados.
+- **Frontend apenas:** nenhum dado será armazenado no site e nenhuma API, backend ou banco de dados será adicionado.
+- **Escopo do bloco:** esta etapa é exclusivamente de auditoria e planejamento. Nenhum formulário ou comportamento novo foi implementado no código do site.
+- **Próxima etapa:** o Bloco 2 criará somente a estrutura HTML sem implementar ainda a montagem da mensagem ou a integração final com o WhatsApp.
 
 ### Resultado esperado
-Fluxo definido e pronto para implementação.
+Fluxo definido, compatível com a arquitetura atual e pronto para implementação.
 
-**Status: ✅ Concluído e revisado.**
+**Status: ✅ Concluído, revisado e refinado.**
 
 ---
 
