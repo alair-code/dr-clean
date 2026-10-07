@@ -1,0 +1,129 @@
+:root {
+            --brand: #14b8a6;
+            --brand-dark: #0f766e;
+            --ink: #0f172a;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: "Inter", sans-serif;
+        }
+        .font-display {
+            font-family: "Sora", sans-serif;
+        }
+        ::selection {
+            background: #14b8a6;
+            color: #fff;
+        }
+        section[id] {
+            scroll-margin-top: 5.5rem;
+        }
+        :focus-visible {
+            outline: 3px solid #14b8a6;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        .hero-bg {
+            background:
+                radial-gradient(60rem 42rem at 82% -12%, rgba(20, 184, 166, 0.32), transparent 60%),
+                radial-gradient(42rem 32rem at 0% 112%, rgba(13, 148, 136, 0.25), transparent 60%),
+                linear-gradient(160deg, #020617 0%, #071a24 45%, #0b2a30 100%);
+        }
+        .dot-grid {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+            background-size: 28px 28px;
+        }
+        .text-gradient {
+            background: linear-gradient(92deg, #2dd4bf, #a7f3d0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+        .floaty {
+            animation: floaty 5s ease-in-out infinite;
+        }
+        @keyframes floaty {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-14px); }
+        }
+        .pulse-whatsapp {
+            animation: pulseWhatsapp 2.2s ease-out infinite;
+        }
+        @keyframes pulseWhatsapp {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.45); }
+            70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .marquee {
+            overflow: hidden;
+            mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+            -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+        }
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: marquee 32s linear infinite;
+        }
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+        @keyframes marquee {
+            to { transform: translateX(-50%); }
+        }
+        .faq-panel {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .faq-panel > div {
+            overflow: hidden;
+        }
+        .faq-item.open .faq-panel {
+            grid-template-rows: 1fr;
+        }
+        .faq-item.open .faq-icon {
+            transform: rotate(45deg);
+            background: #14b8a6;
+            color: #fff;
+        }
+        .faq-icon {
+            transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+        }
+        .ba-before-img {
+            filter: sepia(0.6) saturate(0.5) brightness(0.65) contrast(0.95);
+        }
+        .ba-after-img {
+            filter: saturate(1.12) brightness(1.06) contrast(1.02);
+        }
+        .ba-range {
+            -webkit-appearance: none;
+            appearance: none;
+            background: transparent;
+            cursor: ew-resize;
+        }
+        .ba-range::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 44px;
+            height: 44px;
+            background: transparent;
+            cursor: ew-resize;
+        }
+        .ba-range::-moz-range-thumb {
+            width: 44px;
+            height: 44px;
+            background: transparent;
+            border: none;
+            cursor: ew-resize;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+            html {
+                scroll-behavior: auto;
+            }
+        }
