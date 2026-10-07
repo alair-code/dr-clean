@@ -210,14 +210,24 @@ Clique no botão do formulário abre o WhatsApp com todos os dados preenchidos.
 **Objetivo:** tornar o formulário simples e orientado à conversão.
 
 ### Tarefas
-- [ ] Revisar textos dos campos.
-- [ ] Melhorar CTA.
-- [ ] Reduzir fricção no preenchimento.
-- [ ] Destacar que o orçamento é solicitado pelo WhatsApp.
-- [ ] Manter o formulário objetivo.
+- [x] Revisar textos dos campos.
+- [x] Melhorar CTA.
+- [x] Reduzir fricção no preenchimento.
+- [x] Destacar que o orçamento é solicitado pelo WhatsApp.
+- [x] Manter o formulário objetivo.
+
+### Implementação
+- Os rótulos foram simplificados para facilitar a leitura e a decisão em cada campo.
+- O texto de apoio explica claramente que o WhatsApp será aberto com a mensagem pronta.
+- O CTA passou a ser `Solicitar orçamento pelo WhatsApp`, deixando o próximo passo explícito.
+- Os placeholders foram ajustados para orientar o preenchimento sem criar campos adicionais.
+- O formulário continua com a mesma quantidade de informações e a mesma estrutura funcional.
+- O estado desabilitado do botão agora possui feedback visual durante a abertura do WhatsApp.
 
 ### Resultado esperado
 Fluxo rápido, claro e profissional para geração de leads.
+
+**Status: 🟡 Implementado e aguardando revisão.**
 
 ---
 
