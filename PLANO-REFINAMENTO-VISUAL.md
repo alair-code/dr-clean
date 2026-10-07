@@ -109,7 +109,7 @@ Header moderno, discreto e fácil de usar em qualquer dispositivo.
 
 O visitante deve entender rapidamente **o que a Dr Clean faz, onde atende e como solicitar orçamento**.
 
-**Status:** 🔄 Em implementação
+**Status:** ✅ Concluído
 
 ---
 
