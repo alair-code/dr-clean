@@ -95,6 +95,7 @@
             filter: sepia(0.6) saturate(0.5) brightness(0.65) contrast(0.95);
         }
         .ba-after-img {
+            clip-path: inset(0 0 0 50%);
             filter: saturate(1.12) brightness(1.06) contrast(1.02);
         }
         .ba-range {
