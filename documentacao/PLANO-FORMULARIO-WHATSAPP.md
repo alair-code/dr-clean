@@ -92,15 +92,26 @@ Formulário estruturado, semântico e pronto para receber o comportamento e o re
 **Objetivo:** integrar o formulário ao visual profissional do Dr Clean.
 
 ### Tarefas
-- [ ] Estilizar campos, labels e botão.
-- [ ] Manter identidade visual atual.
-- [ ] Garantir boa leitura em celular.
-- [ ] Garantir boa apresentação em desktop.
-- [ ] Evitar excesso de elementos visuais.
-- [ ] Preservar espaçamento e hierarquia da página.
+- [x] Estilizar campos, labels e botão.
+- [x] Manter identidade visual atual.
+- [x] Garantir boa leitura em celular.
+- [x] Garantir boa apresentação em desktop.
+- [x] Evitar excesso de elementos visuais.
+- [x] Preservar espaçamento e hierarquia da página.
+
+### Implementação
+- Adicionadas classes próprias ao formulário para manter o refinamento visual isolado e evitar alterações acidentais em outros componentes.
+- Campos receberam estados de hover e foco, contraste adequado e área de toque confortável no mobile.
+- Botão recebeu destaque visual compatível com a identidade em teal e largura total no mobile.
+- Desktop mantém duas colunas; telas menores passam para uma coluna usando as classes responsivas já presentes.
+- O formulário mantém fundo translúcido, bordas discretas e sombra compatíveis com o bloco escuro da seção Contato.
+- A preferência de movimento reduzido foi respeitada nas novas transições.
+- Nenhuma validação ou integração com WhatsApp foi adicionada neste bloco.
 
 ### Resultado esperado
-Formulário visualmente integrado e responsivo.
+Formulário visualmente integrado, responsivo e preparado para receber a validação e a integração nos próximos blocos.
+
+**Status: 🟡 Implementado e aguardando revisão.**
 
 ---
 
