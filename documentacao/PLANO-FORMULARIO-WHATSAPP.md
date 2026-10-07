@@ -107,11 +107,12 @@ Formulário estruturado, semântico e pronto para receber o comportamento e o re
 - O formulário mantém fundo translúcido, bordas discretas e sombra compatíveis com o bloco escuro da seção Contato.
 - A preferência de movimento reduzido foi respeitada nas novas transições.
 - Nenhuma validação ou integração com WhatsApp foi adicionada neste bloco.
+- Na revisão final, foram padronizadas as classes visuais dos labels para que todos os campos usem o mesmo refinamento tipográfico, sem alterar a estrutura ou o comportamento do formulário.
 
 ### Resultado esperado
 Formulário visualmente integrado, responsivo e preparado para receber a validação e a integração nos próximos blocos.
 
-**Status: 🟡 Implementado e aguardando revisão.**
+**Status: ✅ Concluído, revisado e refinado.**
 
 ---
 
