@@ -66,9 +66,7 @@ section[id] {
     animation: floaty 6s ease-in-out infinite;
 }
 
-.floaty,
-.pulse-whatsapp,
-.marquee-track {
+.floaty {
     animation-timing-function: ease-in-out;
 }
 
