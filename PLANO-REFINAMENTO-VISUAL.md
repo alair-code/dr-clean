@@ -347,7 +347,7 @@ Footer limpo, elegante e coerente com o restante do site.
 
 Experiência acessível sem alterar a identidade visual.
 
-**Status:** ⬜ Não iniciado
+**Status:** ✅ Concluído
 
 ---
 
