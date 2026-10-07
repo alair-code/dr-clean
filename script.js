@@ -272,11 +272,19 @@
         const baDivider = document.getElementById("ba-divider");
 
         function updateBeforeAfter(value) {
-            baAfter.style.clipPath = "inset(0 0 0 " + value + "%)";
-            baDivider.style.left = value + "%";
+            const numericValue = Number(value);
+            baAfter.style.clipPath = "inset(0 0 0 " + numericValue + "%)";
+            baDivider.style.left = numericValue + "%";
+            baRange.setAttribute(
+                "aria-valuetext",
+                numericValue + "% — " + (numericValue === 50 ? "metade antes e metade depois" : numericValue < 50 ? "mais área do depois" : "mais área do antes")
+            );
         }
 
         baRange.addEventListener("input", function () {
+            updateBeforeAfter(baRange.value);
+        });
+        baRange.addEventListener("change", function () {
             updateBeforeAfter(baRange.value);
         });
         updateBeforeAfter(50);
