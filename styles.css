@@ -839,3 +839,104 @@ body {
 @media (prefers-reduced-motion: reduce) {
     #faq .faq-item { transition: none; }
 }
+
+/* ===== HERO MOBILE FULL PRESENTATION ===== */
+@media (max-width: 1023px) {
+    #inicio {
+        min-height: 100svh;
+    }
+
+    #inicio > .relative.z-10 {
+        grid-template-columns: minmax(0, 1fr);
+        align-items: center;
+    }
+
+    #inicio > .relative.z-10 > div:first-child,
+    #inicio > .relative.z-10 > .hero-visual {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .hero-visual {
+        display: block;
+        width: 100%;
+        max-width: 32rem;
+        margin: 0 auto;
+    }
+
+    .hero-visual > div {
+        position: relative;
+        width: min(100%, 28rem);
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 639px) {
+    #inicio {
+        min-height: 100svh;
+    }
+
+    #inicio > .relative.z-10 {
+        gap: 2rem;
+        padding-top: 6.5rem;
+        padding-bottom: 4rem;
+    }
+
+    #inicio h1 {
+        max-width: none;
+    }
+
+    #inicio > .relative.z-10 > div:first-child {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-visual {
+        max-width: 100%;
+    }
+
+    .hero-visual > div {
+        width: min(100%, 21rem);
+    }
+
+    .hero-visual .floaty {
+        width: 100%;
+    }
+
+    .hero-visual .floaty svg {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-visual > div > div[class*="-right-"],
+    .hero-visual > div > div[class*="-left-"] {
+        max-width: 78%;
+        padding: 0.65rem 0.75rem;
+        font-size: 0.7rem;
+    }
+
+    .hero-visual > div > div[class*="-right-"] {
+        right: 0;
+    }
+
+    .hero-visual > div > div[class*="-left-"] {
+        left: 0;
+    }
+}
+
+@media (max-width: 380px) {
+    #inicio > .relative.z-10 {
+        gap: 1.5rem;
+        padding-top: 6rem;
+        padding-bottom: 3rem;
+    }
+
+    #inicio h1 {
+        font-size: 2.1rem;
+    }
+
+    .hero-visual > div {
+        width: min(100%, 18rem);
+    }
+}
