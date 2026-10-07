@@ -231,7 +231,7 @@ Nenhum botão importante pode parecer quebrado ou levar o usuário para um camin
 
 Experiência mobile premium e confortável, sem qualquer sensação de “site desktop espremido no celular”.
 
-**Status:** ⬜ Não iniciado
+**Status:** ✅ Concluído
 
 ---
 
