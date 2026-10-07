@@ -38,7 +38,7 @@ O refinamento deve funcionar muito bem em **celular, tablet e desktop**, sem per
 
 Ter um diagnóstico claro dos pontos que precisam de refinamento.
 
-**Status:** ⬜ Não iniciado
+**Status:** 🔄 Em implementação
 
 ---
 
