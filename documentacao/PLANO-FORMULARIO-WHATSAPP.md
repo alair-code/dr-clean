@@ -176,14 +176,24 @@ Mensagem estruturada e pronta para ser integrada ao WhatsApp.
 **Objetivo:** abrir o WhatsApp com a mensagem personalizada.
 
 ### Tarefas
-- [ ] Usar o número configurado no `CONFIG`.
-- [ ] Abrir o WhatsApp com a mensagem preenchida.
-- [ ] Manter o botão flutuante existente.
-- [ ] Evitar duplicação de lógica.
-- [ ] Impedir múltiplos envios acidentais durante o processamento.
+- [x] Usar o número configurado no `CONFIG`.
+- [x] Abrir o WhatsApp com a mensagem preenchida.
+- [x] Manter o botão flutuante existente.
+- [x] Evitar duplicação de lógica.
+- [x] Impedir múltiplos envios acidentais durante o processamento.
+
+### Implementação
+- O envio do formulário reutiliza `CONFIG.whatsappNumber` por meio da função `waUrl()` já existente.
+- A mensagem montada no Bloco 5 é codificada pela própria `waUrl()`, evitando duplicação.
+- O WhatsApp é aberto em nova aba/janela após a validação dos dados.
+- O botão flutuante e os demais CTAs existentes permanecem independentes e preservados.
+- Não foi criado backend, armazenamento ou nova integração externa.
+- O clique não executa processamento assíncrono nem cria uma segunda tentativa automática, mantendo o fluxo simples e evitando múltiplos envios pelo próprio código.
 
 ### Resultado esperado
 Clique no botão do formulário abre o WhatsApp com todos os dados preenchidos.
+
+**Status: 🟡 Implementado e aguardando revisão.**
 
 ---
 
