@@ -230,6 +230,7 @@
             if (!mobileMenu.classList.contains("hidden")) {
                 mobileMenu.classList.add("hidden");
                 menuBtn.setAttribute("aria-expanded", "false");
+                menuBtn.setAttribute("aria-label", "Abrir menu");
                 menuBtn.querySelector("i").classList.add("fa-bars");
                 menuBtn.querySelector("i").classList.remove("fa-times");
             }
@@ -238,6 +239,7 @@
         menuBtn.addEventListener("click", function () {
             const isHidden = mobileMenu.classList.toggle("hidden");
             menuBtn.setAttribute("aria-expanded", String(!isHidden));
+            menuBtn.setAttribute("aria-label", isHidden ? "Abrir menu" : "Fechar menu");
             menuBtn.querySelector("i").classList.toggle("fa-bars", isHidden);
             menuBtn.querySelector("i").classList.toggle("fa-times", !isHidden);
         });
