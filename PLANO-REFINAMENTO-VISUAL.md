@@ -255,7 +255,7 @@ Experiência mobile premium e confortável, sem qualquer sensação de “site d
 
 O site deve parecer intencionalmente projetado para desktop, e não apenas ampliado.
 
-**Status:** ⬜ Não iniciado
+**Status:** ✅ Concluído
 
 ---
 
