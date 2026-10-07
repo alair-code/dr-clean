@@ -244,15 +244,26 @@ Fluxo rápido, claro e profissional para geração de leads.
 **Objetivo:** garantir qualidade técnica.
 
 ### Tarefas
-- [ ] Revisar labels e foco por teclado.
-- [ ] Garantir mensagens de erro acessíveis.
-- [ ] Respeitar reduced motion.
-- [ ] Evitar inserir conteúdo HTML não confiável a partir dos campos.
-- [ ] Não expor dados sensíveis.
-- [ ] Revisar possíveis erros no console.
+- [x] Revisar labels e foco por teclado.
+- [x] Garantir mensagens de erro acessíveis.
+- [x] Respeitar reduced motion.
+- [x] Evitar inserir conteúdo HTML não confiável a partir dos campos.
+- [x] Não expor dados sensíveis.
+- [x] Revisar possíveis erros no console.
+
+### Implementação
+- Labels continuam associados aos respectivos campos por `for`/`id`, e os erros levam o foco ao campo inválido.
+- O status do formulário agora usa `role="status"`, `aria-live="polite"` e `aria-atomic="true"` para comunicação acessível.
+- Os estados `aria-invalid` e `aria-describedby` são aplicados somente durante a validação de erro.
+- O projeto mantém suporte a `prefers-reduced-motion`, sem adicionar animações ao fluxo do formulário.
+- Os dados digitados são tratados como texto e enviados por `encodeURIComponent()` através de `waUrl()`, sem uso de `innerHTML` para conteúdo do usuário.
+- Não foram adicionados dados sensíveis nem armazenamento persistente; o formulário trabalha apenas com informações necessárias ao orçamento.
+- A revisão estática do fluxo não identificou chamadas ou alterações que introduzam erros de console no bloco.
 
 ### Resultado esperado
 Formulário acessível, seguro dentro do escopo frontend e sem erros desnecessários.
+
+**Status: 🟡 Implementado e aguardando revisão.**
 
 ---
 
