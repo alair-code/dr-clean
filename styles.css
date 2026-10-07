@@ -940,3 +940,105 @@ body {
         width: min(100%, 18rem);
     }
 }
+
+/* ===== HERO MOBILE — DESKTOP-LIKE COMPOSITION ===== */
+@media (max-width: 1023px) {
+    #inicio > .relative.z-10 {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #inicio > .relative.z-10 > .lg\:col-span-7,
+    #inicio > .relative.z-10 > .hero-visual {
+        grid-column: 1;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .hero-visual {
+        order: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-inline: auto;
+    }
+
+    .hero-visual > .relative {
+        width: min(100%, 32rem);
+        max-width: 32rem;
+        margin-inline: auto;
+    }
+
+    .hero-visual .floaty {
+        width: 100%;
+    }
+
+    .hero-visual .floaty svg {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 639px) {
+    #inicio > .relative.z-10 {
+        gap: 1.75rem;
+        padding-top: 6.5rem;
+        padding-bottom: 4rem;
+    }
+
+    #inicio > .relative.z-10 > .lg\:col-span-7 {
+        order: 1;
+    }
+
+    .hero-visual {
+        order: 2;
+        margin-top: 0;
+    }
+
+    .hero-visual > .relative {
+        width: min(100%, 23rem);
+    }
+
+    .hero-visual > .relative > .absolute.inset-8 {
+        inset: 2rem;
+    }
+
+    .hero-visual > .relative > div[class*="-right-"],
+    .hero-visual > .relative > div[class*="-left-"] {
+        max-width: 76%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 0.6rem 0.7rem;
+    }
+
+    .hero-visual > .relative > div[class*="-right-"] {
+        right: -0.25rem;
+    }
+
+    .hero-visual > .relative > div[class*="-left-"] {
+        left: -0.25rem;
+        bottom: 1.25rem;
+    }
+}
+
+@media (max-width: 380px) {
+    #inicio > .relative.z-10 {
+        gap: 1.25rem;
+        padding-top: 6rem;
+        padding-bottom: 3rem;
+    }
+
+    .hero-visual > .relative {
+        width: min(100%, 19.5rem);
+    }
+
+    .hero-visual > .relative > div[class*="-right-"],
+    .hero-visual > .relative > div[class*="-left-"] {
+        max-width: 72%;
+        font-size: 0.65rem;
+    }
+}
