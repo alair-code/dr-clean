@@ -634,3 +634,12 @@ section[id] {
         transition: none !important;
     }
 }
+
+/* ===== FAQ / TRUST ===== */
+#faq .faq-item { overflow:hidden; border:1px solid var(--border-soft); border-radius:1.25rem; background:#fff; box-shadow:0 8px 28px rgba(15,23,42,.045); transition:border-color .2s ease, box-shadow .2s ease; }
+#faq .faq-item:hover, #faq .faq-item.open { border-color:rgba(20,184,166,.28); box-shadow:0 16px 42px rgba(15,23,42,.08); }
+#faq .faq-question { width:100%; min-height:4.5rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1.15rem 1.25rem; text-align:left; color:var(--ink); }
+#faq .faq-question > span:first-child { max-width:48rem; font-weight:700; line-height:1.45; }
+#faq .faq-panel > div { padding:0 1.25rem 1.25rem; color:var(--muted); line-height:1.75; }
+#faq .faq-icon { flex:0 0 auto; width:2.25rem; height:2.25rem; }
+@media (max-width:639px) { #faq .faq-question{min-height:4.25rem;padding:1rem} #faq .faq-question>span:first-child{font-size:.95rem} #faq .faq-panel>div{padding:0 1rem 1rem;font-size:.94rem} }
