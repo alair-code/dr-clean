@@ -433,14 +433,25 @@
             }, 1500);
         });
 
-        quoteForm.addEventListener("input", function (event) {
-            if (event.target.classList.contains("quote-form-control")) {
-                event.target.removeAttribute("aria-invalid");
-                event.target.removeAttribute("aria-describedby");
-                if (quoteStatus.classList.contains("text-rose-300")) {
-                    setQuoteStatus("", "success");
-                }
+        function clearQuoteFieldError(field) {
+            if (!field || !field.classList.contains("quote-form-control")) {
+                return;
             }
+
+            field.removeAttribute("aria-invalid");
+            field.removeAttribute("aria-describedby");
+
+            if (quoteStatus.classList.contains("text-rose-300")) {
+                setQuoteStatus("", "success");
+            }
+        }
+
+        quoteForm.addEventListener("input", function (event) {
+            clearQuoteFieldError(event.target);
+        });
+
+        quoteForm.addEventListener("change", function (event) {
+            clearQuoteFieldError(event.target);
         });
 
         // ===== EVENT DELEGATION =====
