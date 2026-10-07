@@ -252,6 +252,12 @@
         updateHeaderState();
         window.addEventListener("scroll", updateHeaderState, { passive: true });
 
+        mobileMenu.addEventListener("click", function (event) {
+            if (event.target.closest("a[href^=\"#\"]")) {
+                closeMobileMenu();
+            }
+        });
+
         window.addEventListener("keydown", function (event) {
             if (event.key === "Escape") closeMobileMenu();
         });
