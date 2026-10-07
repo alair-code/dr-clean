@@ -199,7 +199,7 @@ FAQ claro, elegante e útil para quem está quase entrando em contato.
 
 Nenhum botão importante pode parecer quebrado ou levar o usuário para um caminho sem propósito.
 
-**Status:** ⬜ Não iniciado
+**Status:** ✅ Concluído
 
 ---
 
