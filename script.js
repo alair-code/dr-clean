@@ -359,7 +359,14 @@
             }
 
             resize();
-            window.addEventListener("resize", resize);
+            let resizeFrame = 0;
+            window.addEventListener("resize", function () {
+                if (resizeFrame) return;
+                resizeFrame = requestAnimationFrame(function () {
+                    resizeFrame = 0;
+                    resize();
+                });
+            }, { passive: true });
 
             const colors = ["rgba(94,234,212,", "rgba(255,255,255,", "rgba(251,191,36,"];
             const particles = Array.from({ length: 48 }, function () {
