@@ -346,11 +346,17 @@ section[id] {
     position: relative;
 }
 
-:where(#pain-grid, #services-grid, #steps-grid, #why-grid) {
+#pain-grid,
+#services-grid,
+#steps-grid,
+#why-grid {
     align-items: stretch;
 }
 
-:where(#pain-grid, #services-grid, #steps-grid, #why-grid) > article {
+#pain-grid > article,
+#services-grid > article,
+#steps-grid > article,
+#why-grid > article {
     min-width: 0;
     height: 100%;
     box-shadow: var(--shadow-soft);
@@ -361,7 +367,10 @@ section[id] {
         background-color 0.25s ease;
 }
 
-:where(#pain-grid, #services-grid, #steps-grid, #why-grid) > article:hover {
+#pain-grid > article:hover,
+#services-grid > article:hover,
+#steps-grid > article:hover,
+#why-grid > article:hover {
     transform: translateY(-4px);
     border-color: rgba(20, 184, 166, 0.28);
     box-shadow: var(--shadow-premium);
@@ -466,11 +475,17 @@ section[id] {
 }
 
 @media (max-width: 767px) {
-    :where(#pain-grid, #services-grid, #steps-grid, #why-grid) {
+    #pain-grid,
+    #services-grid,
+    #steps-grid,
+    #why-grid {
         gap: 1rem;
     }
 
-    :where(#pain-grid, #services-grid, #steps-grid, #why-grid) > article {
+    #pain-grid > article,
+    #services-grid > article,
+    #steps-grid > article,
+    #why-grid > article {
         border-radius: 1.35rem;
     }
 
@@ -491,7 +506,10 @@ section[id] {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    :where(#pain-grid, #services-grid, #steps-grid, #why-grid) > article,
+    #pain-grid > article,
+    #services-grid > article,
+    #steps-grid > article,
+    #why-grid > article,
     #steps-grid > article > span,
     #services-grid > article::after {
         transition: none !important;
