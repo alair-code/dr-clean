@@ -253,18 +253,27 @@
                     <p class="mt-5 text-lg leading-relaxed text-slate-400">Arraste o controle e veja a diferença que uma higienização profissional pode fazer.</p>
                 </div>
 
-                <div class="relative mx-auto mt-14 aspect-[3/2] max-w-4xl select-none overflow-hidden rounded-3xl shadow-2xl ring-1 ring-white/10">
+                <div class="before-after-frame relative mx-auto mt-14 aspect-[3/2] max-w-4xl select-none overflow-hidden rounded-3xl shadow-2xl ring-1 ring-white/10">
                     <img id="ba-before" src="https://picsum.photos/900/600?random=42" alt="Estofado antes da higienização — imagem ilustrativa" class="ba-before-img absolute inset-0 h-full w-full object-cover" width="900" height="600" loading="lazy">
                     <img id="ba-after" src="https://picsum.photos/900/600?random=42" alt="Estofado depois da higienização — imagem ilustrativa" class="ba-after-img absolute inset-0 h-full w-full object-cover" width="900" height="600" loading="lazy">
-                    <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/30 via-transparent to-slate-950/10" aria-hidden="true"></div>
-                    <span class="pointer-events-none absolute left-4 top-4 rounded-full bg-slate-950/70 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-white backdrop-blur">Antes</span>
-                    <span class="pointer-events-none absolute right-4 top-4 rounded-full bg-teal-500/90 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-white backdrop-blur">Depois</span>
-                    <div id="ba-divider" class="pointer-events-none absolute inset-y-0 left-1/2 z-10 w-1 -translate-x-1/2 bg-white shadow-[0_0_20px_rgba(0,0,0,0.5)]" aria-hidden="true">
-                        <div class="absolute left-1/2 top-1/2 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-teal-700 shadow-xl">
-                            <i class="fas fa-arrows-alt-h" aria-hidden="true"></i>
+                    <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/35 via-transparent to-slate-950/10" aria-hidden="true"></div>
+                    <div class="before-after-label before-after-label--before" aria-hidden="true">
+                        <span>Antes</span>
+                        <small>Antes da higienização</small>
+                    </div>
+                    <div class="before-after-label before-after-label--after" aria-hidden="true">
+                        <span>Depois</span>
+                        <small>Após a higienização</small>
+                    </div>
+                    <div id="ba-divider" class="before-after-divider pointer-events-none absolute inset-y-0 left-1/2 z-10 w-0.5 -translate-x-1/2 bg-white shadow-[0_0_20px_rgba(0,0,0,0.55)]" aria-hidden="true">
+                        <div class="before-after-handle absolute left-1/2 top-1/2 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-white bg-slate-950/85 text-white shadow-2xl backdrop-blur">
+                            <i class="fas fa-arrows-alt-h text-sm" aria-hidden="true"></i>
                         </div>
                     </div>
-                    <input type="range" id="ba-range" min="0" max="100" value="50" class="ba-range absolute inset-0 z-20 h-full w-full opacity-0" aria-label="Arraste para comparar antes e depois">
+                    <input type="range" id="ba-range" min="0" max="100" value="50" class="ba-range absolute inset-0 z-20 h-full w-full" aria-label="Controle de comparação entre antes e depois" aria-valuetext="50% — metade antes e metade depois">
+                    <div class="before-after-hint pointer-events-none absolute bottom-4 left-1/2 z-10 -translate-x-1/2 rounded-full bg-slate-950/75 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-white/90 backdrop-blur" aria-hidden="true">
+                        Arraste para comparar
+                    </div>
                 </div>
 
                 <p class="mt-5 text-center text-sm text-slate-500">
