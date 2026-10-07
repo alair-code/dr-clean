@@ -1326,6 +1326,17 @@ body {
     outline-offset: 1px;
 }
 
+
+.quote-form-control[aria-invalid="true"] {
+    border-color: rgba(251, 113, 133, 0.8);
+    box-shadow: 0 0 0 3px rgba(251, 113, 133, 0.12);
+}
+
+.quote-form-control[aria-invalid="true"]:focus {
+    border-color: rgba(251, 113, 133, 0.95);
+    box-shadow: 0 0 0 3px rgba(251, 113, 133, 0.16);
+}
+
 .quote-form-control:disabled {
     cursor: not-allowed;
     opacity: 0.65;
