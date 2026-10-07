@@ -299,12 +299,13 @@ Formulário acessível, seguro dentro do escopo frontend e sem erros desnecessá
 - O fluxo não depende de backend e permanece adequado para uso em celular e desktop.
 - Os elementos do formulário possuem foco por teclado e feedback acessível.
 - O botão flutuante do WhatsApp permanece fora do fluxo do formulário e não foi alterado.
-- A revisão estática não encontrou erro de referência ou lógica dentro da implementação dos Blocos 4 a 8.
+- A revisão estática não encontrou erro de referência ou lógica no fluxo dos Blocos 4 a 9.
+- O feedback de erro agora é limpo tanto ao digitar quanto ao alterar campos de seleção.
 
 ### Resultado esperado
 Fluxo funcionando de ponta a ponta.
 
-**Status: 🟡 Implementado e aguardando revisão.**
+**Status: ✅ Concluído, revisado e refinado.**
 
 ---
 
