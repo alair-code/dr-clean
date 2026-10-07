@@ -404,16 +404,33 @@
             return lines.join("\n");
         }
 
+        let quoteOpeningLocked = false;
+
         quoteSubmit.addEventListener("click", function () {
-            if (!validateQuoteForm()) {
+            if (quoteOpeningLocked || !validateQuoteForm()) {
                 return;
             }
 
             preparedQuoteMessage = buildQuoteMessage();
             const whatsappUrl = waUrl(preparedQuoteMessage);
 
-            window.open(whatsappUrl, "_blank", "noopener,noreferrer");
-            setQuoteStatus("Mensagem preparada. O WhatsApp foi aberto para você concluir o envio.", "success");
+            quoteOpeningLocked = true;
+            quoteSubmit.disabled = true;
+            quoteSubmit.setAttribute("aria-disabled", "true");
+
+            const whatsappWindow = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+
+            if (whatsappWindow) {
+                setQuoteStatus("Mensagem preparada. O WhatsApp foi aberto para você concluir o envio.", "success");
+            } else {
+                setQuoteStatus("Não foi possível abrir o WhatsApp automaticamente. Verifique se o navegador bloqueou a nova janela e tente novamente.", "error");
+            }
+
+            window.setTimeout(function () {
+                quoteOpeningLocked = false;
+                quoteSubmit.disabled = false;
+                quoteSubmit.removeAttribute("aria-disabled");
+            }, 1500);
         });
 
         quoteForm.addEventListener("input", function (event) {
