@@ -159,13 +159,13 @@
 
         function renderFaqs(items) {
             return items.map(function (f, i) {
-                return '<div class="faq-item overflow-hidden rounded-2xl border border-slate-200 bg-white transition-colors hover:border-teal-200" data-faq-item>' +
-                    '<button type="button" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left" data-faq-toggle id="faq-btn-' + i + '" aria-expanded="false" aria-controls="faq-panel-' + i + '">' +
-                    '<span class="font-display text-base font-semibold text-slate-900 md:text-lg">' + f.q + "</span>" +
-                    '<span class="faq-icon flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-teal-50 text-teal-600"><i class="fas fa-plus" aria-hidden="true"></i></span>' +
+                return '<div class="faq-item" data-faq-item>' +
+                    '<button type="button" class="faq-question" data-faq-toggle id="faq-btn-' + i + '" aria-expanded="false" aria-controls="faq-panel-' + i + '">' +
+                    '<span>' + f.q + "</span>" +
+                    '<span class="faq-icon flex items-center justify-center rounded-full bg-teal-50 text-teal-600"><i class="fas fa-plus" aria-hidden="true"></i></span>' +
                     "</button>" +
                     '<div id="faq-panel-' + i + '" class="faq-panel" role="region" aria-labelledby="faq-btn-' + i + '">' +
-                    '<div><p class="px-6 pb-6 text-sm leading-relaxed text-slate-600">' + f.a + "</p></div></div></div>";
+                    '<div><p>' + f.a + "</p></div></div></div>";
             }).join("");
         }
 
