@@ -71,7 +71,7 @@
         const contactItems = [
             { icon: "fab fa-whatsapp", label: "WhatsApp", value: "(21) 99612-1202", sub: "Orçamento rápido e sem compromisso", href: "#", wa: true },
             { icon: "fab fa-instagram", label: "Instagram", value: "@dr_clean25", sub: "Acompanhe nossos trabalhos", href: CONFIG.instagramUrl, external: true },
-            { icon: "fas fa-map-marker-alt", label: "Atendimento", value: "Manhumirim – MG", sub: "Endereço completo em breve", href: "" }
+            { icon: "fas fa-map-marker-alt", label: "Atendimento", value: "Manhumirim – MG", sub: "Atendimento em Manhumirim e região", href: "" }
         ];
 
         const footerLinks = [
