@@ -227,9 +227,18 @@ Clique no botão do formulário abre o WhatsApp com todos os dados preenchidos.
 ### Resultado esperado
 Fluxo rápido, claro e profissional para geração de leads.
 
-**Status: 🟡 Implementado e aguardando revisão.**
+**Status: ✅ Concluído, revisado e refinado.**
 
 ---
+
+
+### Revisão do bloco
+- A copy foi revisada para reduzir dúvidas e deixar o próximo passo explícito.
+- O CTA comunica diretamente a ação e o canal de atendimento.
+- O formulário mantém quantidade e ordem de informações coerentes com o fluxo definido.
+- O campo de observação foi padronizado com a mesma classe de controle dos demais campos, garantindo foco, estados visuais e comportamento responsivo consistentes.
+- O botão continua ocupando toda a largura no mobile e mantém dimensionamento adequado no desktop.
+- Não foram identificados campos ou textos que exigissem remoção sem alterar o escopo definido.
 
 ## Bloco 8 — Acessibilidade e segurança do frontend
 **Objetivo:** garantir qualidade técnica.
