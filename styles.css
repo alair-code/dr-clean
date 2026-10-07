@@ -837,6 +837,26 @@ body {
 }
 
 
+/* ===== BLOCO 12 — IMAGENS E ELEMENTOS VISUAIS ===== */
+.ba-before-img {
+    filter: saturate(0.72) brightness(0.86);
+    transition: filter 0.35s ease;
+}
+
+.ba-after-img {
+    filter: saturate(1.04) brightness(1.02);
+}
+
+.before-after-frame img {
+    max-width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ba-before-img {
+        transition: none;
+    }
+}
+
 /* ===== BLOCO 11 — MICROINTERAÇÕES E ANIMAÇÕES ===== */
 @media (prefers-reduced-motion: no-preference) {
     .hero-actions a,
